@@ -44,13 +44,11 @@
             {{-- VIEW OUTPUT --}}
             {{$slot}}
         </main>
-
-
         <!-- Footer -->
     <footer class="w-full p-8 bg-platinum fixed bottom-0 flex items-center justify-center mt-24 opacity-90">
         <p>Job Hunt | 2023</p>
     <!-- Post Job Button -->
-        <button class="bg-white p-4 mr-4 uppercase font-bold shadow-md absolute right-0 hover:bg-hover">Post Job</button>  
+        <a href="listings/create" class="bg-white p-4 mr-4 uppercase font-bold shadow-md absolute right-0 hover:bg-hover">Post Job</a>  
 </footer>
 </body>
 </html>

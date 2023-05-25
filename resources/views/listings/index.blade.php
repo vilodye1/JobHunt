@@ -36,6 +36,5 @@
     <section id="developer-listing">
         
     </section>
-    
 </x-layout>
     
