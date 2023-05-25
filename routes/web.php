@@ -10,5 +10,6 @@ Route::get('/', [ListingController::class, 'index']);
 // create job post
 Route::get('/listings/create', [ListingController::class, 'create']);
 
+// keep at bottom
 // single listing
 Route::get('/listings/{listing}', [ListingController::class, 'single']);

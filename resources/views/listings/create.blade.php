@@ -1,5 +1,4 @@
 <x-layout>
-    <!-- Register Form -->
     <header class="text-center">
         <h2 class="text-2xl font-bold uppercase mb-1">Create new Listing</h2>
     </header>

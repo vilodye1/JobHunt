@@ -6,7 +6,7 @@
         <div class="flex flex-col">
             <h1 class="text-2xl font-bold mt-2">{{$listing->title}}</h1>
             <p class="font-bold tracking-wide text-darkGrayishBlue">{{$listing->company}}</p>
-            <p class="mb-10">{{$listing->location}}</p>
+            <p class="mb-5">{{$listing->location}}</p>
             <p>{{$listing->description}}</p>
             <a href="mailto:{{$listing->email}}" target="_blank" class="bg-moonstone p-2 rounded text-white my-5 hover:brightness-90">Send Email</a>
             <a href="{{$listing->website}}" target="_blank" class="bg-royalBlue p-2 rounded text-white mb-5 hover:brightness-90">Visit Website</a>
