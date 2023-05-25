@@ -31,7 +31,7 @@
             <x-listing-card :listing='$listing' />
         @endforeach
         @else
-        <p>No jobs posted.</p>  
+        <p>No jobs posted</p>  
         @endunless
 
 
