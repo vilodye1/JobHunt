@@ -32,7 +32,7 @@
         <nav class="flex flex-row justify-between items-center p-4 md:mx-4">
             <!-- Logo -->
             <div>
-                <a href="#" class="font-bold text-2xl md:text-4xl">Job<span class="text-hover">Hunt</span></a>
+                <a href="/" class="font-bold text-2xl md:text-4xl">Job<span class="text-hover">Hunt</span></a>
             </div>    
             <!-- Reg/Login buttons -->
             <div class="flex flex-row mr-6 space-x-10 md:text-lg">
@@ -48,7 +48,7 @@
     <footer class="w-full p-8 bg-platinum fixed bottom-0 flex items-center justify-center mt-24 opacity-90">
         <p>Job Hunt | 2023</p>
     <!-- Post Job Button -->
-        <a href="listings/create" class="bg-white p-4 mr-4 uppercase font-bold shadow-md absolute right-0 hover:bg-hover">Post Job</a>  
+        <a href="listings/create" class="bg-moonstone text-white p-4 mr-4 uppercase font-bold shadow-md absolute right-0 hover:bg-hover">Post Job</a>  
 </footer>
 </body>
 </html>

@@ -26,7 +26,15 @@
                 <!-- right button -->
                 <button class="hidden bg-veryLightBlue py-4 px-6 rounded-full absolute left-2 mt-36 shadow-md hover:bg-hover active:shadow-none transition-all duration-300"><</button>
         <!-- Listings Group -->
-        <x-listing-card />
+        @unless (count($listings) == 0)
+        @foreach ($listings as $listing)
+            <x-listing-card :listing='$listing' />
+        @endforeach
+        @else
+        <p>No jobs posted.</p>  
+        @endunless
+
+
         </div>
         <a href="#" class="float-right mr-10 text-lg hover:text-hover">View all ></a>
     </section>

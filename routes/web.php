@@ -1,12 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListingController;
+use App\Http\Controllers\ProfileController;
 
-Route::get('/', function () {
-    return view('listings/index');
-});
+// Homepage
+Route::get('/', [ListingController::class, 'index']);
 
-Route::get('/create', function () {
-    return view('listings/create');
-});
+// single listing
+Route::get('/listings/{listing}', [ListingController::class, 'single']);
