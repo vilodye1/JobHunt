@@ -7,5 +7,8 @@ use App\Http\Controllers\ProfileController;
 // Homepage
 Route::get('/', [ListingController::class, 'index']);
 
+// create job post
+Route::get('/listings/create', [ListingController::class, 'create']);
+
 // single listing
 Route::get('/listings/{listing}', [ListingController::class, 'single']);
