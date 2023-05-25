@@ -7,9 +7,9 @@
         <p class="font-bold tracking-wide text-darkGrayishBlue">Lara Corps</p>
         <!-- Tags -->
         <div class="p-2 space-x-2">
-            <a href="#" class="bg-royalBlue text-white rounded-full px-2 py-0.5 hover:text-powderblue">UI</a>
-            <a href="#" class="bg-royalBlue text-white rounded-full px-2 py-0.5 hover:text-powderblue">Full Stack</a>
-            <a href="#" class="bg-royalBlue text-white rounded-full px-2 py-0.5 hover:text-powderblue">Vue js</a>
+            <x-tag>UI</x-tag>
+            <x-tag>Full Stack</x-tag>
+            <x-tag>JavaScript</x-tag>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</p>
     </div>

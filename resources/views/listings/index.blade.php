@@ -27,14 +27,8 @@
                 <button class="hidden bg-veryLightBlue py-4 px-6 rounded-full absolute left-2 mt-36 shadow-md hover:bg-hover active:shadow-none transition-all duration-300"><</button>
         <!-- Listings Group -->
         <x-listing-card />
-        <x-listing-card />
-        <x-listing-card />
-        <x-listing-card />
         </div>
         <a href="#" class="float-right mr-10 text-lg hover:text-hover">View all ></a>
-    </section>
-    <section id="developer-listing">
-        
     </section>
 </x-layout>
     
