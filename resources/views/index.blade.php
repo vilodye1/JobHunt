@@ -59,7 +59,7 @@
     </section>
     <!-- Listings Section -->
     <section id="listings" class="w-full">
-        <h2 class="text-3xl text-center pl-2 font-bold lg:text-left lg:ml-8">Browse Current Listings</h2>
+        <h2 class="text-3xl text-center pl-2 font-bold mt-6 lg:text-left lg:ml-8">Browse Current Listings</h2>
         <!-- Listing Container -->
         <div class="grid mx-6 my-2 lg:grid-cols-4 md:grid-cols-2 md:gap-4 lg:mx-10">
             <!-- Left button -->
