@@ -10,9 +10,9 @@
     </section>
     <!-- Search section -->
     <section id="search" class="bg-platinum">
-        <form action="#">
+        <form action="/">
             <div class="p-6 text-center">
-              <input type="text" class="w-full rounded-full p-3 focus:outline-none md:w-3/4" placeholder="Search jobs...">  
+              <input type="text" name="search" class="w-full rounded-full p-3 focus:outline-none md:w-3/4" placeholder="Search jobs...">  
             </div>
         </form>  
     </section>
