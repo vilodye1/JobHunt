@@ -13,4 +13,5 @@
         </div>
         <p>{{$listing->description}}</p>
     </div>
+    <p class="text-platinum mt-2">{{$listing->created_at}}</p>
 </div>

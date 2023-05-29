@@ -1,3 +1,5 @@
+<x-flash-message />
+
 <x-layout>
     <!-- Hero Section -->
     <section id="hero" class="h-1/3">
@@ -22,9 +24,9 @@
         <!-- Listing Container -->
         <div class="grid mx-6 my-2 lg:grid-cols-4 md:grid-cols-2 md:gap-4 lg:mx-10">
             <!-- Left button -->
-                <button class="hidden bg-veryLightBlue py-4 px-6 rounded-full absolute right-2 mt-36 lg:block shadow-md hover:bg-hover active:shadow-none transition-all duration-300">></button>
+                {{-- <button class="hidden bg-veryLightBlue py-4 px-6 rounded-full absolute right-2 mt-36 lg:block shadow-md hover:bg-hover active:shadow-none transition-all duration-300">></button>
                 <!-- right button -->
-                <button class="hidden bg-veryLightBlue py-4 px-6 rounded-full absolute left-2 mt-36 shadow-md hover:bg-hover active:shadow-none transition-all duration-300"><</button>
+                <button class="hidden bg-veryLightBlue py-4 px-6 rounded-full absolute left-2 mt-36 shadow-md hover:bg-hover active:shadow-none transition-all duration-300"><</button> --}}
         <!-- Listings Group -->
         @unless (count($listings) == 0)
         @foreach ($listings as $listing)
@@ -36,7 +38,10 @@
 
 
         </div>
-        <a href="#" class="float-right mr-10 text-lg hover:text-hover">View all ></a>
+        <div class="mx-10">
+            {{$listings->links()}}
+        </div>
+        {{-- <a href="#" class="float-right mr-10 text-lg hover:text-hover">View all ></a> --}}
     </section>
 </x-layout>
     
