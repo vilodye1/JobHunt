@@ -10,7 +10,7 @@ class ListingController extends Controller
     // show all listings
     public function index() {
         return view('/listings/index', [
-            'listings' => Listing::latest()->filter(request(['tags', 'search']))->paginate(4)
+            'listings' => Listing::latest()->filter(request(['tags', 'search']))->paginate(8)
         ]);
     }
     // show single listing
@@ -20,7 +20,25 @@ class ListingController extends Controller
         ]);
     }
 
+    // show create post form
     public function create() {
         return view('/listings/create');
+    }
+
+    // store listing data in database
+    public function store(Request $request) {
+        $form = $request->validate([
+            'company' => 'required|unique:listings,company',
+            'email' => 'required|email',
+            'title' => 'required',
+            'location' => 'required',
+            'website' => 'required',
+            'tags' => 'required',
+            'description' => 'required'
+        ]);
+
+        Listing::create($form);
+
+        return redirect('/');
     }
 }
