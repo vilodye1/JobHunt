@@ -7,7 +7,11 @@
             <h2 class="text-5xl font-bold lg:text-7xl">Job<span class="text-white">Hunt</span></h2>
             <p class="lg:text-2xl">Find a job or find a developer all in one place</p><br>
             <!-- Button -->
+            @auth
+            <a href="/listings/create" class="hidden text-1xl bg-veryLightBlue rounded-full py-2 px-4 shadow-md hover:bg-hover hover:text-white transition-all duration-300 md:block">Create A New Listing</a>
+            @else
             <a href="/users/register" class="hidden text-1xl bg-veryLightBlue rounded-full py-2 px-4 shadow-md hover:bg-hover hover:text-white transition-all duration-300 md:block">Get Started</a>
+            @endauth
         </div>
     </section>
     <!-- Search section -->
@@ -43,15 +47,16 @@
         </div>
     </section>
     {{-- OUR WHY --}}
-    <section class="bg-platinum w-full h-60 my-20">
+    <section class="bg-platinum w-full h-70 my-20">
         <div class="py-10 text-center">
             <h1 class=' text-3xl md:text-5xl font-bold text-center'>Find your perfect fit.</h1>
-           <div class="my-5 px-2 space-x-3 md:w-1/2 mx-auto flex flex-wrap justify-center space-y-1">
+           <div class="mt-5 mb-10 px-2 space-x-3 md:w-2/3 mx-auto flex flex-wrap justify-center space-y-1">
             @foreach ($data as $tags)
             <x-tag :tags="$tags->tags" />
             @endforeach
            </div>
-  
+           <p class="text-2xl font-bold mb-5 md:mb-2">Don't Miss Out</p>
+           <a href="/users/register" class="text-1xl mx-auto bg-moonstone text-white rounded-full py-4 px-4 w-48 shadow-md hover:bg-hover hover:text-white transition-all duration-300 md:block">Get Started Today!</a>
         </div>
     </section>
 </x-layout>

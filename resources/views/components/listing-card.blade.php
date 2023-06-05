@@ -7,6 +7,7 @@
     <div class="flex flex-col">
         <a href="/listings/{{$listing->id}}" class="text-2xl font-bold mt-2">{{$listing->title}}</a>
         <p class="font-bold tracking-wide text-darkGrayishBlue">{{$listing->company}}</p>
+        <p class="text-sm">{{$listing->location}}</p>
         <!-- Tags -->
         <div class="p-2 space-x-2">
             <x-tag :tags="$listing->tags" />
