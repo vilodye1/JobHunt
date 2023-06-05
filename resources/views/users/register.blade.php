@@ -44,7 +44,7 @@
             </div>
             <div class="mt-8">
                 <p>Already have an account?
-                    <a href="/login" class=" text-moonstone hover:text-hover ml-1">Login</a>
+                    <a href="/users/login" class=" text-moonstone hover:text-hover ml-1">Login</a>
                 </p>
             </div>
         </form>

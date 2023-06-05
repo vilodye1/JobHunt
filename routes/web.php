@@ -28,6 +28,15 @@ Route::get('/users/register', [UserController::class, 'register']);
 // Create new user
 Route::post('/users', [UserController::class, 'store']);
 
+// Logout
+Route::post('/logout', [UserController::class, 'logout']);
+
+// Login form
+Route::get('/users/login', [UserController::class, 'login']);
+
+// Login user
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
 // keep at bottom
 // single listing
 Route::get('/listings/{listing}', [ListingController::class, 'single']);

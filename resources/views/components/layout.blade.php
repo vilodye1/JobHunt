@@ -55,7 +55,7 @@
             <!-- Reg/Login buttons -->
             <div class="flex flex-row mr-6 space-x-10 md:text-lg">
                 <a href="/users/register" class="hover:text-hover">Register</a>
-                <a href="login.html" class="hover:text-hover">Login</a>
+                <a href="/users/login" class="hover:text-hover">Login</a>
             </div>
             @endauth
         </nav>
