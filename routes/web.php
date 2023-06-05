@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ListingController;
-use App\Http\Controllers\ProfileController;
 
 // Homepage
 Route::get('/', [ListingController::class, 'index']);
@@ -21,6 +21,12 @@ Route::put('/listings/{listing}', [ListingController::class, 'update']);
 
 // delete form
 Route::delete('/listings/{listing}', [ListingController::class, 'delete']);
+
+//register form
+Route::get('/users/register', [UserController::class, 'register']);
+
+// Create new user
+Route::post('/users', [UserController::class, 'store']);
 
 // keep at bottom
 // single listing
