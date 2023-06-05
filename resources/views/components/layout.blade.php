@@ -40,12 +40,24 @@
             <!-- Logo -->
             <div>
                 <a href="/" class="font-bold text-2xl md:text-4xl">Job<span class="text-hover">Hunt</span></a>
-            </div>    
+            </div>
+            <!-- Auth buttons -->
+            @auth
+            <div class="flex flex-row mr-6 space-x-10 md:text-lg">
+                <span class="font-bold uppercase">Welcome, {{auth()->user()->name}}</span>
+                <a href="login.html" class="hover:text-hover">Manage Listings</a>
+                <form class="inline" method="POST" action="/logout">
+                    @csrf
+                    <button class="text-moonstone font-bold" type="submit">Logout</button>
+                </form>
+            </div>
+            @else   
             <!-- Reg/Login buttons -->
             <div class="flex flex-row mr-6 space-x-10 md:text-lg">
                 <a href="/users/register" class="hover:text-hover">Register</a>
                 <a href="login.html" class="hover:text-hover">Login</a>
             </div>
+            @endauth
         </nav>
         <main>
             {{-- VIEW OUTPUT --}}

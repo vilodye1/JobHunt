@@ -9,7 +9,7 @@
             @csrf
             <div class="mb-6">
                 <label for="name" class="inline-block mb-2">Name</label>
-                <input class="border border-gray-200 rounded p-2 w-full"type="text" name="name">
+                <input class="border border-gray-200 rounded p-2 w-full"type="text" name="name" value="{{old('name')}}">
 
                 @error('name')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
@@ -17,7 +17,7 @@
             </div>
             <div class="mb-6">
                 <label for="email" class="inline-block mb-2">Email</label>
-                <input class="border border-gray-200 rounded p-2 w-full" type="email" name="email">
+                <input class="border border-gray-200 rounded p-2 w-full" type="email" name="email" value="{{old('email')}}">
 
                 @error('email')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
@@ -25,7 +25,7 @@
             </div>
             <div class="mb-6">
                 <label for="password" class="inline-block mb-2">Password</label>
-                <input class="border border-gray-200 rounded p-2 w-full" type="password" name="password">
+                <input class="border border-gray-200 rounded p-2 w-full" type="password" name="password" value="{{old('password')}}">
 
                 @error('password')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
