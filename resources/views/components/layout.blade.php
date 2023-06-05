@@ -45,7 +45,7 @@
             @auth
             <div class="flex flex-row mr-6 space-x-10 md:text-lg">
                 <span class="font-bold uppercase">Welcome, {{auth()->user()->name}}</span>
-                <a href="login.html" class="hover:text-hover">Manage Listings</a>
+                <a href="/listings/manage" class="hover:text-hover">Manage Listings</a>
                 <form class="inline" method="POST" action="/logout">
                     @csrf
                     <button class="text-moonstone font-bold hover:text-hover " type="submit">Logout</button>

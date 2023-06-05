@@ -13,12 +13,12 @@
         </div>
     </div>
     <div class="text-center flex gap-x-10 justify-center mx-auto border rounded my-10 p-4 max-w-2xl">
-        <a href="/listings/{{$listing->id}}/edit"><i class="fa-solid fa-pencil"></i> Edit</a>
+        <a href="/listings/{{$listing->id}}/edit"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
         {{-- DELETE FORM --}}
         <form method="POST" action="/listings/{{$listing->id}}">
             @csrf
             @method('DELETE')
-            <button class="text-red-500"><i class="fa-solid fa-trash"></i> Delete</button>
+            <button class="text-red-500"><i class="fa-solid fa-trash-can"></i> Delete</button>
         </form>
     </div>
 
