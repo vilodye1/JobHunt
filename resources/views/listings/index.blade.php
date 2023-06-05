@@ -7,7 +7,7 @@
             <h2 class="text-5xl font-bold lg:text-7xl">Job<span class="text-white">Hunt</span></h2>
             <p class="lg:text-2xl">Find a job or find a developer all in one place</p><br>
             <!-- Button -->
-            <a href="register.html" class="hidden text-1xl bg-veryLightBlue rounded-full py-2 px-4 shadow-md hover:bg-hover hover:text-white transition-all duration-300 md:block">Get Started</a>
+            <a href="/users/register" class="hidden text-1xl bg-veryLightBlue rounded-full py-2 px-4 shadow-md hover:bg-hover hover:text-white transition-all duration-300 md:block">Get Started</a>
         </div>
     </section>
     <!-- Search section -->

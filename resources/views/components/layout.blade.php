@@ -48,7 +48,7 @@
                 <a href="login.html" class="hover:text-hover">Manage Listings</a>
                 <form class="inline" method="POST" action="/logout">
                     @csrf
-                    <button class="text-moonstone font-bold" type="submit">Logout</button>
+                    <button class="text-moonstone font-bold hover:text-hover " type="submit">Logout</button>
                 </form>
             </div>
             @else   
