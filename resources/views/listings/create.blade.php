@@ -4,7 +4,7 @@
     </header>
 
     <div class="container w-3/4 bg-platinum mx-auto my-10 p-6 md:w-1/2 lg:w-1/3">
-        <form method="POST" action="/">
+        <form method="POST" action="/" enctype="multipart/form-data">
             @csrf
             <div class="mb-6">
                 <label for="company" class="inline-block mb-2">Company Name</label>
@@ -46,10 +46,14 @@
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
             </div>
-            {{-- <div class="mb-6">
+            <div class="mb-6">
                 <label for="Logo" class="inline-block mb-2">Company Logo</label>
                 <input class="border border-gray-200 rounded p-2 w-full" type="file" name="logo">
-            </div> --}}
+
+                @error('logo')
+                <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
             <div class="mb-6">
                 <label for="tags" class="inline-block mb-2">Tags <span class="text-xs text-darkGrayishBlue">comma separated, min: 3</span></label>
                 <input class="border border-gray-200 rounded p-2 w-full" type="text" name="tags" placeholder="Example: Laravel, backend, vuejs" value="{{old('tags')}}">
