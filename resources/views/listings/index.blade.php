@@ -55,9 +55,13 @@
             <x-tag :tags="$tags->tags" />
             @endforeach
            </div>
-           <p class="text-2xl font-bold mb-5 md:mb-2">Don't Miss Out</p>
-           <a href="/users/register" class="text-1xl mx-auto bg-moonstone text-white rounded-full py-4 px-4 w-48 shadow-md hover:bg-hover hover:text-white transition-all duration-300 md:block">Get Started Today!</a>
-        </div>
+      </div>
+      <div class="bg-moonstone text-center py-10">
+        <p class="text-4xl font-bold mb-5 md:mb-2 text-center text-white">Don't Miss Out</p>
+        <p class="text-white">Sign up for new job alerts</p>
+        <input type="email" class="rounded-full my-5 md:w-1/3">
+        <button type="submit" class="bg-platinum rounded px-3 py-2 ml-2 hover:bg-hover">Submit</button>
+       </div>
     </section>
 </x-layout>
     
