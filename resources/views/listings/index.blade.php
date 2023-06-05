@@ -46,7 +46,7 @@
             {{$listings->links()}}
         </div>
     </section>
-    {{-- OUR WHY --}}
+    {{-- TAG SEARCH AND EMAILS --}}
     <section class="bg-platinum w-full h-70 my-20">
         <div class="py-10 text-center">
             <h1 class=' text-3xl md:text-5xl font-bold text-center'>Find your perfect fit.</h1>
@@ -63,5 +63,15 @@
         <button type="submit" class="bg-platinum rounded px-3 py-2 ml-2 hover:bg-hover">Submit</button>
        </div>
     </section>
+{{-- SOCIAL HANDLES --}}
+<p class="text-center text-2xl mb-5">Visit us on social media</p>
+<div class=" text-5xl md:text-6xl text-center space-x-2 md:space-x-5">
+   <a href="#" class="hover:text-royalBlue"><i class="fa-brands fa-twitter"></i></a>
+   <a href="#" class="hover:text-royalBlue"><i class="fa-brands fa-instagram"></i></a> 
+   <a href="#" class="hover:text-royalBlue"><i class="fa-brands fa-facebook"></i></a> 
+   <a href="#" class="hover:text-royalBlue"><i class="fa-brands fa-youtube"></i></a> 
+   <a href="#" class="hover:text-royalBlue"><i class="fa-brands fa-github"></i></a> 
+</div>
+
 </x-layout>
     
