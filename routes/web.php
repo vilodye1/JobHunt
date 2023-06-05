@@ -14,8 +14,13 @@ Route::get('/listings/create', [ListingController::class, 'create']);
 Route::post('/', [ListingController::class, 'store']);
 
 // show edit form
-Route::get('/listings/{listing}/edit',
-ListingController::class, 'edit');
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
+
+// update form
+Route::put('/listings/{listing}', [ListingController::class, 'update']);
+
+// delete form
+Route::delete('/listings/{listing}', [ListingController::class, 'delete']);
 
 // keep at bottom
 // single listing

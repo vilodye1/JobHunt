@@ -47,7 +47,35 @@ class ListingController extends Controller
     }
 
     // show edit form
-    public function update(Listing $listing) {
-        return view('listing/edit', [Listing ])
+    public function edit(Listing $listing) {
+        return view('/listings/edit', ['listing'=>$listing]);
+    }
+
+    // update listing
+    public function update(Request $request, Listing $listing) {
+        $form = $request->validate([
+            'company' => 'required',
+            'email' => 'required|email',
+            'title' => 'required',
+            'location' => 'required',
+            'website' => 'required',
+            'tags' => 'required',
+            'description' => 'required'
+        ]);
+
+        if($request->hasFile('logo')) {
+            $form['logo'] = $request->file('logo')->store('logos', 'public');
+        }
+
+        $listing->update($form);
+
+        return back()->with('message', 'Listing updated successfully!');
+    }
+
+    // delete listing
+    public function delete(Listing $listing) {
+        $listing->delete();
+
+        return redirect('/')->with('message', 'Listing deleted successfully');
     }
 }

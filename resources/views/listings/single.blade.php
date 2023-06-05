@@ -11,6 +11,15 @@
             <a href="mailto:{{$listing->email}}" target="_blank" class="bg-moonstone p-2 rounded text-white my-5 hover:brightness-90">Send Email</a>
             <a href="{{$listing->website}}" target="_blank" class="bg-royalBlue p-2 rounded text-white mb-5 hover:brightness-90">Visit Website</a>
         </div>
-        <a href="/listings/{{$listing->id}}/edit">edit</a>
     </div>
+    <div class="text-center flex gap-x-10 justify-center mx-auto border rounded my-10 p-4 max-w-2xl">
+        <a href="/listings/{{$listing->id}}/edit"><i class="fa-solid fa-pencil"></i> Edit</a>
+        {{-- DELETE FORM --}}
+        <form method="POST" action="/listings/{{$listing->id}}">
+            @csrf
+            @method('DELETE')
+            <button class="text-red-500"><i class="fa-solid fa-trash"></i> Delete</button>
+        </form>
+    </div>
+
 </x-layout>
