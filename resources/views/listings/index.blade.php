@@ -41,7 +41,18 @@
         <div class="mx-10">
             {{$listings->links()}}
         </div>
-        {{-- <a href="#" class="float-right mr-10 text-lg hover:text-hover">View all ></a> --}}
+    </section>
+    {{-- OUR WHY --}}
+    <section class="bg-platinum w-full h-60 my-20">
+        <div class="py-10 text-center">
+            <h1 class=' text-3xl md:text-5xl font-bold text-center'>Find your perfect fit.</h1>
+           <div class="my-5 px-2 space-x-3 md:w-1/2 mx-auto flex flex-wrap justify-center space-y-1">
+            @foreach ($data as $tags)
+            <x-tag :tags="$tags->tags" />
+            @endforeach
+           </div>
+  
+        </div>
     </section>
 </x-layout>
     

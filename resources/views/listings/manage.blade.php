@@ -7,7 +7,7 @@
             </h1>
         </header>
 
-        <table class="w-1/2 m-auto table-auto rounded-sm">
+        <table class=" w-full md:w-1/2 m-auto table-auto rounded-sm">
             <tbody>
                 @unless($listings->isEmpty())
                 @foreach ($listings as $listing)
@@ -30,7 +30,7 @@
                     </td>
                     <td
                     class="px-4 py-8 border-t border-b border-gray-300 text-lg">
-                    <form action="/listings/{{$listing->id}}">
+                    <form method="POST" action="/listings/{{$listing->id}}">
                         @csrf
                         @method('DELETE')
                         <button class="text-red-600">

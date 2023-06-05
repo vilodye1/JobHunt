@@ -12,6 +12,8 @@
             <a href="{{$listing->website}}" target="_blank" class="bg-royalBlue p-2 rounded text-white mb-5 hover:brightness-90">Visit Website</a>
         </div>
     </div>
+
+    @auth
     <div class="text-center flex gap-x-10 justify-center mx-auto border rounded my-10 p-4 max-w-2xl">
         <a href="/listings/{{$listing->id}}/edit"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
         {{-- DELETE FORM --}}
@@ -21,5 +23,5 @@
             <button class="text-red-500"><i class="fa-solid fa-trash-can"></i> Delete</button>
         </form>
     </div>
-
+    @endauth
 </x-layout>

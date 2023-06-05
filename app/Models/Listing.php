@@ -15,7 +15,7 @@ class Listing extends Model
         // ?? if not false
         if($filters['tag'] ?? false) {
             // % means before or after the request
-            $query->where('tag', 'like', '%' . request('tags') . '%');
+            $query->where('tags', 'like', '%' . request('tag') . '%');
         }
 
         if($filters['search'] ?? false) {

@@ -9,10 +9,14 @@ class ListingController extends Controller
 {
     // show all listings
     public function index() {
+
         return view('/listings/index', [
-            'listings' => Listing::latest()->filter(request(['tags', 'search']))->simplePaginate(4)
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->simplePaginate(8),
+            'data' => Listing::select('tags')->distinct()->get()
+
         ]);
     }
+
     // show single listing
     public function single(Listing $listing) {
         return view('/listings/single', [
@@ -86,7 +90,7 @@ class ListingController extends Controller
         if($listing->user_id != auth()->id()) {
             abort(403, 'unauthorized action');
         }
-        
+
         $listing->delete();
 
         return redirect('/')->with('message', 'Listing deleted successfully');

@@ -43,8 +43,8 @@
             </div>
             <!-- Auth buttons -->
             @auth
-            <div class="flex flex-row mr-6 space-x-10 md:text-lg">
-                <span class="font-bold uppercase">Welcome, {{auth()->user()->name}}</span>
+            <div class="flex flex-row mr-6 space-x-5 md:space-x-10 md:text-lg">
+                <span class="font-bold uppercase hidden md:block">Welcome, {{auth()->user()->name}}</span>
                 <a href="/listings/manage" class="hover:text-hover">Manage Listings</a>
                 <form class="inline" method="POST" action="/logout">
                     @csrf
